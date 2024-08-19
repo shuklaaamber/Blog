@@ -21,6 +21,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
+      - name: Set Heroku Buildpack
+        run: |
+          heroku buildpacks:set heroku/nodejs -a ambers-blog
       - uses: akhileshns/heroku-deploy@v3.13.15 # This is the action
         with:
           heroku_api_key: HRKU-51ec2a91-c055-4395-be83-88dfcdf36f6a
