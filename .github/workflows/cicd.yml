@@ -13,8 +13,7 @@ jobs:
         with:
           node-version: 22
       - name: npm install
-        run: |
-          npm install
+        run: npm install
         env:
           CI: true
   deploy:
